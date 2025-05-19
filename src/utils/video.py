@@ -96,7 +96,7 @@ def concat_frames(driving_image_lst, source_image_lst, I_p_lst):
         else:
             driving_image = driving_image_lst[idx]
             driving_image_resized = cv2.resize(driving_image, (w, h))
-            out = np.hstack((driving_image_resized, source_image_resized, I_p))
+            out = np.hstack((driving_image_resized, I_p))
 
         out_lst.append(out)
     return out_lst
